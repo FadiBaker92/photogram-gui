@@ -19,13 +19,14 @@
     <th></th>
   
   </tr>
-
+<%@the_user.own_photos.each do |a_photo|%>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  
+    <td><img src="<%=a_photo.image%>"></a></td>
+    <td><%=@the_user.username%></td>
+    <td><%=a_photo.caption%></td>
+    <td><%=a_photo.created_at%></td>
+    <td>Show details</td>
+  <% end %>
   </tr>
 
 </table>
